@@ -1,0 +1,23 @@
+<?php /* @var $films \Application\Collection\FilmCollection */ ?>
+<h1>Meetings</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Date debut</th>
+            <th>Date fin</th>
+            <th>Communaute</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($meetings as $meeting) : /* @var $film \Meeting\Entity\Meeting */ ?>
+        <tr>
+            <td><?= $meeting->getName() ?> </td>
+            <td><?= $meeting->getDateDebut() ?> </td>
+            <td><?= $meeting->getDateFin() ?> </td>
+            <td><?= $meeting->getCommunaute()->getName() ?> </td>
+        </tr>
+    <?php endforeach ?>
+    </tbody>
+
+</table>
